@@ -1,0 +1,85 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6472238}{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=6472238} \\
+  来源：& IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE, 2013 \\
+  作者：& Yoshua Bengio, Aaron Courville, and Pascal Vincent \\
+
+ % 源码：& \href{xxx}{xxx} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{deep learning, representation learning, feature learning} \\
+
+  写于：& \date{2021-01-26}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{6472238}写于2013年，虽然有一点久远了，但全文内容十分充实、全面，不愧是Bengio巨佬的论文。该文主要对无监督的表征学习进行了总结，内容涵盖了概率模型、自编码器、流形学习以及神经网络。
+
+机器学习的效果严重依赖于输入的数据 --- 即特征工程，在机器学习相关的任务中大部分的时间其实都花在了处理数据、构建特征上。特征工程通常作为下游任务的输入，对于构建的特征，有一个很通用的标准：要有区分性。
+
+\paragraph{表征学习的应用}
+\subparagraph{语音识别与信号处理}
+\subparagraph{目标识别}
+\subparagraph{自然语言处理}
+\subparagraph{多任务学习、迁移学习、领域适应}
+
+\paragraph{表征学习中的Priors}
+\subparagraph{Smothness}
+输入空间中相近的数据点在表征空间中也应该是相近的。相近的概念要看各个空间中距离是如何定义的。这是最基本的一个prior，但可能会导致curse of dimensionality。通常输入空间中样本的分布是很复杂的，在表征空间中会对输入空间进行一定的压缩，这会导致在表征空间中产生一些wrinkles --- 可能有一些导数很大或者不可导的区域。为了在表征空间中尽量连续，则需要大量的数据来“抹平”这些wrinkles。当输入空间的维数增大时，为了“抹平”wrinkles所需的数据将呈指数形式增长 --- curse of dimensionality。
+
+\subparagraph{Multiple explanatory factors}
+输入的数据可能是由一些潜在的因素生成的 --- “有一双魔掌在控制着世间万物的生灭”。
+
+\subparagraph{A hierarchical organization of explanatory factors}
+潜在因素可以通过层次化的结构进行组织，即我们对数据的抽象是层次化的、逐步的。
+
+\subparagraph{Semi-supervised learning}
+当我们使用数据去预测目标时，控制输入数据的潜在因素同样也能控制目标。对$P(X)$有用的表征同样对$P(Y|X)$也是有用的。其实，我感觉这也可以从层次化的角度来看，目标可以看作输入的更深层次的抽象，输入和目标都是受潜在因素控制的，只不过二者的抽象程度不同。
+
+\subparagraph{Shared factors across tasks}
+不同的任务之间是会共享一些潜在因素的，这也是迁移学习有效果的原因之一。
+
+\subparagraph{Manifold}
+数据空间中，样本点并不是随机或者均匀分布的，而是呈现聚集的状态，数据会集中地占据空间的一部分。不同类型的数据之间数据点密度是较低的。
+
+\subparagraph{Natural clustering}
+同类的数据在输入/表征空间中应该是自然聚集的。
+
+\subparagraph{Temporal and spatial coherence}
+输入空间中的微小变化也对应着目标空间中的微小变化，与函数的连续性很相似。
+
+\subparagraph{Sparsity}
+给定一个样本点$x$，只有一部分因素与之相关，具体来看，表征向量大部分维上取值维0，既可以表示为表征向量对输入的微小变化是不敏感的。
+
+\subparagraph{Simplicity of factor dependencies}
+良好的表征，因素之间的关系应该是尽量简单的，如相互独立、线性关系等。
+
+\paragraph{What makes a Representation Good?}
+首先，当然应该包含上述的Priors。其次，还有以下因素：
+\subparagraph{Distributed representation}
+\subparagraph{Depth and Abstraction}
+通常表征学习模型具有一定的深度 --- 在学习数据表征的过程中是有一定层次的，能够帮助产生逐步抽象的数据。抽象的数据表征对一些变化是具有不变性的，如平移、旋转、缩放等。
+
+\subparagraph{Disentangling Factors of Variation}
+潜在因素之间尽可能使独立的。
+
+\subparagraph{Good Criteria for  Learning Representation?}
+
+接下来论文对如何构建deep representation进行了介绍，比如通过逐层训练的方式来学习深度模型。
+
+在表征学习中，主要可以分为两个流派：概率图模型、神经网络模型。可以简单的区分二者：隐藏单元是被视为隐变量还是可计算结点。接下来就是介绍各种模型了，其中概率模型一直没看懂，都是通过输入、表征的概率分布来建模的，一般是通过最大化似然概率来求解。
+
+接下来是直接学习一个映射将数据从输入空间映射到表征空间，主要介绍了自编码器、regularized autoencoders。在去噪自编码器（从含噪声的样本中能够重建出无噪的样本）中，这需要借助一个假设：样本点使流形数据，数据点是聚集的。加入噪声后的数据会从一定程度上偏离流形，偏离到密度更低的区域。
+
+其实，表征学习可以看作流形学习。有这么一个假设：真实世界中的数据所处的空间是非常大的，甚至是无限维的，数据可以用一个更低维的空间来表示。接下来论文就介绍了一些流形学习的方法。
+
+接下来论文介绍了训练深度模型时的一些问题，如1）参数初始化的重要性；2）参数稀疏性的重要性，当大部分参数一起更新时，目标函数可能会在多个方向上移动，这使得收敛变得困难；3）数值计算的问题，如病态方程等；4）标记数据对模型的效果的提升。
+
+这篇论文真的是非常厚重了，内容足足的，可惜还有不少内容我看不太懂，哎，巨佬就是巨佬啊，非一日之功啊！

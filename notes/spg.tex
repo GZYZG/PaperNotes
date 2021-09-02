@@ -1,0 +1,40 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6494675}{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=6494675} \\
+  来源：& IEEE Signal Processing Magazine, 2013 \\
+  作者：& David I Shuman, Sunil K. Narang, Pascal Frossard et.al \\
+
+  %源码：& \href{xxx}{xxx} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{graph signal, signal processing, network analysis} \\
+
+  写于：& \date{2021-01-15}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{6494675}写于2013年，对当时兴起的图信号处理领域进行了总结，主要的内容包括：领域内的主要挑战、定义图谱（graph spectral）领域的不同方法、处理图信号时应用图的不规则结构的重要性、将一些信号处理领域的操作推广到图信号处理领域。
+
+怎么写这篇论文的笔记呢？其实这篇论文我也看的不是很懂，里面涉及很多信号处理领域的理论，也需要较强的数学功底，特别是很多操作是在傅里叶变换的基础上定义的，具体的理论部分我只是浅尝辄止。
+
+论文中首先介绍graph形式的数据在生活中的广泛，当然现在已经有更多的graph形式的数据被发现。既然是图上的信号处理，那能不能将现有的信号处理的方法应用到图信号上呢？当然是可以的，但是也不能生搬硬套，\tbc{red}{如何将现有的信号处理理论方法迁移到图信号上}就是一个挑战。
+
+紧接着论文介绍了谱图领域。图信号可以用$\mathbb{R}^N$中的一个点来表示（n为图中结点数），并用图Laplacian矩阵定义了图信号的傅里叶变换。图信号可以在顶点域（vertex domain）和谱域（spectral domain）中定义，先前的定义是在顶点域上的定义。
+
+最重要的部分就是将传统信号处理领域的理论和方法推广到图信号上了。推广的对信号的操作包括滤波（频率域和顶点域）、卷积、平移、调制和膨胀、图的粗化和下采样、readout等。
+
+
+一些领域内开放的问题：
+\begin{itemize}
+	\item 如何使用Laplacian
+	\item 图中结点距离的度量方式很多，该使用哪种
+	\item 对于大图，很多矩阵分解的方法不再适用
+	\item 如何将图信号的性质与图的性质联系起来
+\end{itemize}

@@ -1,0 +1,17 @@
+\begin{center}
+  \begin{tabular}{rl}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  论文地址：& \href{https://arxiv.org/abs/1707.05005}{https://arxiv.org/abs/1707.05005} \\
+  源码地址：& \href{https://github.com/MLDroid/graph2vec_tf}{graph2vec} \\
+  关键词：& \textbf{Graph Kernels, doc2vec, representation learning} \\
+  写于：& \date{2020-09-30}
+  \end{tabular}
+\end{center}
+
+论文\cite{DBLP:journals/corr/NarayananCVCLJ17}提出了图的embedding方法---graph2vec，该方法借鉴word2vec, doc2vec的思想，以rooted subgraph 作为图的元素，通过最大化似然概率来得到每个图的定长的embedding向量。
+
+\par 如果熟悉word2vec的话，其实很容易就理解这篇论文的方法了（虽然graph2vec是在模仿doc2vec，但doc2vec开起来像在模仿word2vec）。因为graph2vec是在word2vec基础上做的，它们之间存在一个比较直白的对应关系，厘清它们之间的对应关系就明白graph2vec了。
+\par 在介绍doc2vec和graph2vec的对应关系之前，先介绍一下rooted graph的概念。rooted subgraph是一个类似于树状的结构，可以看作一棵多叉树，树中的结点就是图中的结点，结点按照图中的邻接关系相连。可以根据图中的每个结点$v$生成一棵rooted subgraph，以$v$为根，它的子结点为它的邻居结点，每个子结点又以自己的邻居结点为子结点，如此递归定义下去就是以$v$为根的rooted subgraph。接下来介绍graph2vec和doc2vec之间的概念对应关系。
+\par 在doc2vec中，每个doc(文档)被看做词序列的集合，优化文档向量的基础就是：最大化词序列和文档的共现率。graph2vec将一个graph看做一个文档，rooted graph看做文档中的词序列。所以优化graph embedding的基础就是：最大化rooted subgraph和graph的共现率。与word2vec类似，graph2vec中也使用了负采样的方法对算法进行优化。
+
+\par 与最近使用GNN来进行graph embedding的方法相比，graph2vec是transductive的，对于未见过的graph需要重新运行一遍算法来生成embedding，与Deepwalk很像。我这里有一个想法，rooted subgraph能否通过其他形式来替代，比如node2vec中的游走策略生成的子图。

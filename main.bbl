@@ -1,0 +1,414 @@
+\begin{thebibliography}{10}
+
+\bibitem{alon2021on}
+Uri Alon and Eran Yahav.
+\newblock On the bottleneck of graph neural networks and its practical
+  implications.
+\newblock In {\em International Conference on Learning Representations}, 2021.
+
+\bibitem{arora2019exact}
+Sanjeev Arora, Simon~S. Du, Wei Hu, Zhiyuan Li, Ruslan Salakhutdinov, and
+  Ruosong Wang.
+\newblock On exact computation with an infinitely wide neural net, 2019.
+
+\bibitem{bai2019simgnn}
+Yunsheng Bai, Hao Ding, Song Bian, Ting Chen, Yizhou Sun, and Wei Wang.
+\newblock Simgnn - a neural network approach to fast graph similarity
+  computation.
+\newblock {\em WSDM}, pages 384--392, 2019.
+
+\bibitem{bai2019unsupervised}
+Yunsheng Bai, Hao Ding, Yang Qiao, Agustin Marinovic, Ken Gu, Ting Chen, Yizhou
+  Sun, and Wei Wang.
+\newblock Unsupervised inductive graph-level representation learning via
+  graph-graph proximity, 2019.
+
+\bibitem{bai2018convolutional}
+Yunsheng Bai, Hao Ding, Yizhou Sun, and Wei Wang.
+\newblock Convolutional set matching for graph similarity, 2018.
+
+\bibitem{6472238}
+Y.~{Bengio}, A.~{Courville}, and P.~{Vincent}.
+\newblock Representation learning: A review and new perspectives.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  35(8):1798--1828, 2013.
+
+\bibitem{chen2018fastgcn}
+Jie Chen, Tengfei Ma, and Cao Xiao.
+\newblock Fastgcn: Fast learning with graph convolutional networks via
+  importance sampling.
+\newblock {\em ICLR}, 2018.
+
+\bibitem{cheng2016wide}
+Heng-Tze Cheng, Levent Koc, Jeremiah Harmsen, Tal Shaked, Tushar Chandra,
+  Hrishi Aradhye, Glen Anderson, Greg Corrado, Wei Chai, Mustafa Ispir, Rohan
+  Anil, Zakaria Haque, Lichan Hong, Vihan Jain, Xiaobing Liu, and Hemal Shah.
+\newblock Wide & deep learning for recommender systems.
+\newblock {\em Proceedings of the 1st Workshop on Deep Learning for Recommender
+  Systems}, 2016.
+
+\bibitem{cho2014learning}
+Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi
+  Bougares, Holger Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation, 2014.
+
+\bibitem{covington2016deep}
+Paul Covington, Jay Adams, and Emre Sargin.
+\newblock Deep neural networks for youtube recommendations.
+\newblock {\em RecSys}, pages 191--198, 2016.
+
+\bibitem{cui2020enhancing}
+Peng Cui, Le~Hu, and Yuanchao Liu.
+\newblock Enhancing extractive text summarization with topic-aware graph neural
+  networks, 2020.
+
+\bibitem{tgat_iclr20}
+da~Xu, chuanwei ruan, evren korpeoglu, sushant kumar, and kannan achan.
+\newblock Inductive representation learning on temporal graphs.
+\newblock In {\em International Conference on Learning Representations (ICLR)},
+  2020.
+
+\bibitem{dhillon2007weighted}
+S.~Inderjit Dhillon, Yuqiang Guan, and Brian Kulis.
+\newblock Weighted graph cuts without eigenvectors a multilevel approach.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  pages 1944--1957, 2007.
+
+\bibitem{doersch2016tutorial}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders, 2016.
+
+\bibitem{francesco2020weakly-supervised}
+Locatello Francesco, Poole Ben, Rätsch Gunnar, Schölkopf Bernhard, Bachem
+  Olivier, and Tschannen Michael.
+\newblock Weakly-supervised disentanglement without compromises.
+\newblock {\em ICML}, pages 6348--6359, 2020.
+
+\bibitem{goodfellow2014generative}
+Ian {Goodfellow}, Jean {Pouget-Abadie}, Mehdi {Mirza}, Bing {Xu}, David
+  {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, and Yoshua {Bengio}.
+\newblock Generative adversarial nets.
+\newblock In {\em Advances in Neural Information Processing Systems 27}, pages
+  2672--2680, 2014.
+
+\bibitem{he2016deep}
+kaiming he, xiangyu zhang, shaoqing ren, and jian sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em CVPR}, 2016.
+
+\bibitem{dgp}
+Hengguan Huang, Fuzhao Xue, Hao Wang, and Ye~Wang.
+\newblock Deep graph random process for relational-thinking-based speech
+  recognition.
+\newblock In {\em Proceedings of the 37th International Conference on Machine
+  Learning, {ICML} 2020, 13-18 July 2020, Virtual Event}, volume 119 of {\em
+  Proceedings of Machine Learning Research}, pages 4531--4541. {PMLR}, 2020.
+
+\bibitem{huang2020combining}
+Qian Huang, Horace He, Abhay Singh, Ser-Nam Lim, and R.~Austin Benson.
+\newblock Combining label propagation and simple models out-performs graph
+  neural networks.
+\newblock {\em international conference on learning representations}, 2020.
+
+\bibitem{huifeng2017deepfm}
+Guo Huifeng, Tang Ruiming, Ye~Yunming, Li~Zhenguo, and He~Xiuqiang.
+\newblock Deepfm: A factorization-machine based neural network for ctr
+  prediction.
+\newblock {\em IJCAI International Joint Conference on Artificial
+  Intelligence}, pages 1725--1731, 2017.
+
+\bibitem{jang2017categorical}
+Eric Jang, Shixiang Gu, and Ben Poole.
+\newblock Categorical reparameterization with gumbel-softmax.
+\newblock {\em ICLR}, 2017.
+
+\bibitem{juan2016field-aware}
+Yu-Chin Juan, Yong Zhuang, Wei-Sheng Chin, and Chih-Jen Lin.
+\newblock Field-aware factorization machines for ctr prediction.
+\newblock {\em RecSys}, pages 43--50, 2016.
+
+\bibitem{khasahmadi2020memory-based}
+Hosein~Amir Khasahmadi, Kaveh Hassani, Parsa Moradi, Leo Lee, and Quaid Morris.
+\newblock Memory-based graph networks.
+\newblock {\em ICLR}, 2020.
+
+\bibitem{kingma2014auto}
+Diederik~P {Kingma} and Max {Welling}.
+\newblock Auto-encoding variational bayes.
+\newblock In {\em ICLR 2014 : International Conference on Learning
+  Representations (ICLR) 2014}, 2014.
+
+\bibitem{kingma2014autoencoding}
+Diederik~P Kingma and Max Welling.
+\newblock Auto-encoding variational bayes, 2014.
+
+\bibitem{kipf2016variational}
+Thomas~N Kipf and Max Welling.
+\newblock Variational graph auto-encoders.
+\newblock {\em NIPS Workshop on Bayesian Deep Learning}, 2016.
+
+\bibitem{li2019deepgcns}
+Guohao Li, Matthias Müller, Ali Thabet, and Bernard Ghanem.
+\newblock Deepgcns: Can gcns go as deep as cnns?
+\newblock In {\em The IEEE International Conference on Computer Vision (ICCV)},
+  2019.
+
+\bibitem{li2015gated}
+Yujia Li, Daniel Tarlow, Marc Brockschmidt, and Richard Zemel.
+\newblock Gated graph sequence neural networks.
+\newblock {\em arXiv preprint arXiv:1511.05493}, 2015.
+
+\bibitem{li2018learning}
+Yujia {Li}, Oriol {Vinyals}, Chris {Dyer}, Razvan {Pascanu}, and Peter
+  {Battaglia}.
+\newblock Learning deep generative models of graphs.
+\newblock In {\em ICLR 2018 : International Conference on Learning
+  Representations 2018}, 2018.
+
+\bibitem{liu2021retrieval-augmented}
+Shangqing Liu, Yu~Chen, Xiaofei Xie, Kai~Jing Siow, and Yang Liu.
+\newblock Retrieval-augmented generation for code summarization via hybrid gnn.
+\newblock {\em ICLR}, 2021.
+
+\bibitem{long2015fully}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell.
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock {\em computer vision and pattern recognition}, pages 3431--3440,
+  2015.
+
+\bibitem{ma2020deep}
+Guixiang Ma, Nesreen~K. Ahmed, Theodore~L. Willke, and Philip~S. Yu.
+\newblock Deep graph similarity learning: A survey, 2020.
+
+\bibitem{makhzani2016adversarial}
+Alireza Makhzani, Jonathon Shlens, Navdeep Jaitly, Ian Goodfellow, and Brendan
+  Frey.
+\newblock Adversarial autoencoders, 2016.
+
+\bibitem{mao2020expressive}
+Chengsheng Mao, Liang Yao, and Yuan Luo.
+\newblock Towards expressive graph representation, 2020.
+
+\bibitem{mazur2019vector}
+Denis Mazur, Vage Egiazarian, Stanislav Morozov, and Artem Babenko.
+\newblock Beyond vector spaces: Compact data representation as differentiable
+  weighted graphs, 2019.
+
+\bibitem{mcmahan2011follow-the-regularized-leader}
+Brendan~H. McMahan.
+\newblock Follow-the-regularized-leader and mirror descent: Equivalence
+  theorems and l1 regularization.
+\newblock {\em AISTATS}, pages 525--533, 2011.
+
+\bibitem{mesquita2020rethinking}
+Diego Mesquita, Amauri Souza, and Samuel Kaski.
+\newblock Rethinking pooling in graph neural networks.
+\newblock {\em NeurIPS}, 2020.
+
+\bibitem{micali2016reconstructing}
+Silvio Micali and Allen~Zeyuan Zhu.
+\newblock Reconstructing markov processes from independent and anonymous
+  experiments.
+\newblock {\em Discrete Applied Mathematics}, pages 108--122, 2016.
+
+\bibitem{10.1145/219717.219748}
+George~A. Miller.
+\newblock Wordnet: A lexical database for english.
+\newblock {\em Commun. ACM}, 38(11):39–41, November 1995.
+
+\bibitem{mitrovic2021representation}
+Jovana Mitrovic, Brian McWilliams, Jacob~C Walker, Lars~Holger Buesing, and
+  Charles Blundell.
+\newblock Representation learning via invariant causal mechanisms.
+\newblock In {\em International Conference on Learning Representations}, 2021.
+
+\bibitem{DBLP:journals/corr/NarayananCVCLJ17}
+Annamalai Narayanan, Mahinthan Chandramohan, Rajasekar Venkatesan, Lihui Chen,
+  Yang Liu, and Shantanu Jaiswal.
+\newblock graph2vec: Learning distributed representations of graphs.
+\newblock {\em CoRR}, abs/1707.05005, 2017.
+
+\bibitem{10.1007/3-540-44802-0_1}
+Peter O'Hearn, John Reynolds, and Hongseok Yang.
+\newblock Local reasoning about programs that alter data structures.
+\newblock In Laurent Fribourg, editor, {\em Computer Science Logic}, pages
+  1--19, Berlin, Heidelberg, 2001. Springer Berlin Heidelberg.
+
+\bibitem{pareja2019evolvegcn}
+Aldo Pareja, Giacomo Domeniconi, Jie Chen, Tengfei Ma, Toyotaro Suzumura,
+  Hiroki Kanezashi, Tim Kaler, and E.~Charles Leisersen.
+\newblock Evolvegcn: Evolving graph convolutional networks for dynamic graphs.
+\newblock {\em arXiv: Learning}, 2019.
+
+\bibitem{pennington-etal-2014-glove}
+Jeffrey Pennington, Richard Socher, and Christopher Manning.
+\newblock {G}lo{V}e: Global vectors for word representation.
+\newblock In {\em Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing ({EMNLP})}, pages 1532--1543, Doha, Qatar,
+  October 2014. Association for Computational Linguistics.
+
+\bibitem{rendle2010factorization}
+Steffen Rendle.
+\newblock Factorization machines.
+\newblock {\em ICDM}, pages 995--1000, 2010.
+
+\bibitem{ronneberger2015u-net}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock {\em Lecture Notes in Computer Science}, pages 234--241, 2015.
+
+\bibitem{rossi2020temporal}
+Emanuele Rossi, Ben Chamberlain, Fabrizio Frasca, Davide Eynard, Federico
+  Monti, and Michael Bronstein.
+\newblock Temporal graph networks for deep learning on dynamic graphs.
+\newblock 2020.
+
+\bibitem{ryabinin2020embedding}
+Max Ryabinin, Sergei Popov, Liudmila Prokhorenkova, and Elena Voita.
+\newblock Embedding words in non-vector space with unsupervised graph learning.
+\newblock In {\em Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, 2020.
+
+\bibitem{sankar2020dysat}
+Aravind Sankar, Yanhong Wu, Liang Gou, Wei Zhang, and Hao Yang.
+\newblock Dysat: Deep neural representation learning on dynamic graphs via
+  self-attention networks.
+\newblock In {\em Proceedings of the 13th International Conference on Web
+  Search and Data Mining}, pages 519--527, 2020.
+
+\bibitem{shang2021discrete}
+Chao Shang, Jie Chen, and Jinbo Bi.
+\newblock Discrete graph structure learning for forecasting multiple time
+  series.
+\newblock {\em international conference on learning representations}, 2021.
+
+\bibitem{shervashidze2011weisfeiler}
+Nino {Shervashidze}, Pascal {Schweitzer}, Erik~Jan van {Leeuwen}, Kurt
+  {Mehlhorn}, and Karsten~M. {Borgwardt}.
+\newblock Weisfeiler-lehman graph kernels.
+\newblock {\em Journal of Machine Learning Research}, 12(77):2539--2561, 2011.
+
+\bibitem{6494675}
+D.~I. {Shuman}, S.~K. {Narang}, P.~{Frossard}, A.~{Ortega}, and
+  P.~{Vandergheynst}.
+\newblock The emerging field of signal processing on graphs: Extending
+  high-dimensional data analysis to networks and other irregular domains.
+\newblock {\em IEEE Signal Processing Magazine}, 30(3):83--98, 2013.
+
+\bibitem{simonovsky2018graphvae}
+Martin {Simonovsky} and Nikos {Komodakis}.
+\newblock Graphvae: Towards generation of small graphs using variational
+  autoencoders.
+\newblock In {\em 27th International Conference on Artificial Neural Networks
+  (ICANN)}, pages 412--422, 2018.
+
+\bibitem{tonekaboni2020unsupervised}
+Sana Tonekaboni, Danny Eytan, and Anna Goldenberg.
+\newblock Unsupervised representation learning for time series with temporal
+  neighborhood coding.
+\newblock {\em international conference on learning representations}, 2020.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  N.~Aidan Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock {\em ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS 30 (NIPS
+  2017)}, pages 5998--6008, 2017.
+
+\bibitem{wan2020contrastive}
+Sheng Wan, Shirui Pan, Jian Yang, and Chen Gong.
+\newblock Contrastive and generative graph convolutional networks for
+  graph-based semi-supervised learning.
+\newblock 2020.
+
+\bibitem{SEED_Lichen}
+Lichen Wang, Bo~Zong, Qianqian Ma, Wei Cheng, Jingchao Ni, Wenchao Yu, Yanchi
+  Liu, Dongjin Song, Haifeng Chen, and Yun Fu.
+\newblock Inductive and unsupervised representation learning on graph
+  structured objects.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{wang2021inductive}
+Yanbang Wang, Yen-Yu Chang, Yunyu Liu, Jure Leskovec, and Pan Li.
+\newblock Inductive representation learning in temporal networks via causal
+  anonymous walks.
+\newblock In {\em International Conference on Learning Representations}, 2021.
+
+\bibitem{weston2015aicomplete}
+Jason Weston, Antoine Bordes, Sumit Chopra, Alexander~M. Rush, Bart van
+  Merriënboer, Armand Joulin, and Tomas Mikolov.
+\newblock Towards ai-complete question answering: A set of prerequisite toy
+  tasks, 2015.
+
+\bibitem{9046288}
+Z.~{Wu}, S.~{Pan}, F.~{Chen}, G.~{Long}, C.~{Zhang}, and P.~S. {Yu}.
+\newblock A comprehensive survey on graph neural networks.
+\newblock {\em IEEE Transactions on Neural Networks and Learning Systems},
+  pages 1--21, 2020.
+
+\bibitem{xu2020hierarchical}
+Haoyan Xu, Runjian Chen, Yunsheng Bai, Ziheng Duan, Jie Feng, Ke~Luo, Yizhou
+  Sun, and Wei Wang.
+\newblock Hierarchical large-scale graph similarity computation via graph
+  coarsening and matching, 2020.
+
+\bibitem{xu2018how}
+Keyulu Xu, Weihua Hu, Jure Leskovec, and Stefanie Jegelka.
+\newblock How powerful are graph neural networks?
+\newblock In {\em International Conference on Learning Representations}, 2019.
+
+\bibitem{yan2018spatial}
+Sijie Yan, Yuanjun Xiong, and Dahua Lin.
+\newblock Spatial temporal graph convolutional networks for skeleton-based
+  action recognition.
+\newblock {\em AAAI}, pages 7444--7452, 2018.
+
+\bibitem{yanardag2015deep}
+Pinar Yanardag and V.~N.~S. Vishwanathan.
+\newblock Deep graph kernels.
+\newblock {\em ACM Knowledge Discovery and Data Mining}, pages 1365--1374,
+  2015.
+
+\bibitem{ying2019hierarchical}
+Rex Ying, Jiaxuan You, Christopher Morris, Xiang Ren, William~L. Hamilton, and
+  Jure Leskovec.
+\newblock Hierarchical graph representation learning with differentiable
+  pooling, 2019.
+
+\bibitem{you2020graph}
+Jiaxuan You, Jure Leskovec, Kaiming He, and Saining Xie.
+\newblock Graph structure of neural networks, 2020.
+
+\bibitem{you2019graph}
+Jiaxuan You, Bowen Liu, Rex Ying, Vijay Pande, and Jure Leskovec.
+\newblock Graph convolutional policy network for goal-directed molecular graph
+  generation, 2019.
+
+\bibitem{you2018graphrnn}
+Jiaxuan {You}, Rex {Ying}, Xiang {Ren}, William~L. {Hamilton}, and Jure
+  {Leskovec}.
+\newblock Graphrnn: Generating realistic graphs with deep auto-regressive
+  models.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5694--5703, 2018.
+
+\bibitem{young-etal-2014-image}
+Peter Young, Alice Lai, Micah Hodosh, and Julia Hockenmaier.
+\newblock From image descriptions to visual denotations: New similarity metrics
+  for semantic inference over event descriptions.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  2:67--78, 2014.
+
+\bibitem{Zeng_2021}
+Hanqing Zeng, Hongkuan Zhou, Ajitesh Srivastava, Rajgopal Kannan, and Viktor
+  Prasanna.
+\newblock Accurate, efficient and scalable training of graph neural networks.
+\newblock {\em Journal of Parallel and Distributed Computing}, 147:166–183,
+  Jan 2021.
+
+\bibitem{zhang2020learning}
+Bowen Zhang, Hexiang Hu, Vihan Jain, Eugene Ie, and Fei Sha.
+\newblock Learning to represent image and text with denotation graph, 2020.
+
+\end{thebibliography}

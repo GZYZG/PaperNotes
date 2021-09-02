@@ -1,0 +1,246 @@
+\documentclass[a4paper,table]{article}
+\usepackage[a4paper,top=2cm,bottom=2.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[UTF8]{ctex}
+\usepackage[utf8x]{inputenc}
+\usepackage{listings}
+
+%% Sets page size and margins
+
+\usepackage{float}
+%% Useful packages
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bbold}
+
+\usepackage{pdfpages}
+
+% 表情可参考：https://gist.github.com/rxaviers/7360908
+\usepackage{emoji}
+
+
+\graphicspath{ {./images/} }
+% \DeclareGraphicsExtensions{.pdf,.jpg,.png}
+%\usepackage{biblatex}
+%\addbibresource{references.bib}
+
+%\usepackage{bibletext}
+% 将参考文献加进目录中
+\usepackage[nottoc]{tocbibind}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=cyan,
+}
+
+%% defined colors
+\definecolor{Blue}{rgb}{0,0,0.5}
+\definecolor{Green}{rgb}{0,0.75,0.0}
+\definecolor{LightGray}{rgb}{0.6,0.6,0.6}
+\definecolor{DarkGray}{rgb}{0.3,0.3,0.3}
+
+%\newcommand{\tred}[1]{ {\textcolor{red}{#1}} }
+%\newcommand{\tbred}[1]{ {\textbf{\textcolor{red}{#1}} } }
+%\newcommand{\tbc}[2]{ {\textbf{\textcolor{#1}{#2}} } }
+
+\title{论文阅读笔记}
+\author{
+郭治焱 \\ 
+zhiyanguo@hnu.edu.cn \href{www.gzyzq.site}{www.gzyzq.site} \\ 
+% \\ \textbf{Group} 1234
+}
+\date{\today}
+
+\begin{document}
+\input{setup/mycmd}
+\maketitle
+
+\pdfbookmark[0]{目~~~~录}{mulu}
+\tableofcontents
+\listoffigures
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%\abstract{This is the template .}
+\section{GraphRNN: Generating Realistic Graphs with Deep Auto-Regressive Models}
+\input{notes/graphrnn}
+
+\clearpage
+\section{How powerful are graph gnns?}
+\input{notes/powerful-gnns}
+
+\clearpage
+\section{Gated Graph Sequence Neural Networks}
+\input{notes/GGS-NN}
+
+
+\clearpage
+\section{Graph Structure of Neural Networks}
+\input{notes/Graph2NN}
+
+\clearpage
+\section{Variational Graph Auto-Encoders}
+\input{notes/VGAE}
+
+\clearpage
+\section{Hierarchical Graph Representation Learning with Differentiable Pooling}
+\input{notes/DIFFPOOL}
+
+\section{Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation}
+\input{notes/GCPN}
+
+\section{Auto-Encoding Variational Bayes}
+\input{notes/AEVB}
+
+\section{Deep Graph random Process for Relational-Thinking-based Speech Recognition}
+\input{notes/DGP}
+
+\section{Adversarial Autoencoders}
+\input{notes/AAE}
+
+\section{A Comprehensive Survey on Graph Neural Network}
+\input{notes/survey_on_gnn}
+
+
+\section{The Emerging Field of Signal Processing on Graphs}
+\input{notes/spg}
+
+\section{Rethinking pooling in graph neural networks}
+\input{notes/rethinking}
+
+\section{FASTGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling}
+\input{notes/fastgcn}
+
+\section{Weakly-Supervised Disentanglement Without Compromises}
+\input{notes/weakly-supervised}
+
+\section{Representation Learning: A Review and New Perspectives}
+\input{notes/representation-learning}
+
+\section{Contrastive and Generative Graph Convolutional Networks for Graph-based Semi-Supervised Learning}
+\input{notes/CG3}
+
+\section{Inductive and Unsupervised Representation Learning on Graph Structured Objects}
+\input{notes/SEED}
+
+\section{Attention is All you need}
+\input{notes/Transformer}
+
+\section{Deep Residual Learning for Image Recognition}
+\input{notes/ResNet}
+
+\section{DeepGCNs: Can GCNs Go as Deep as CNNs?}
+\input{notes/DeepGCN}
+
+\section{Combining Label Propagation and Simple Models OUT-PERFORMS Graph Networks}
+\input{notes/C_S}
+
+\section{On the Bottleneck of Graph Neural Networks And Practical Implcation}
+\input{notes/GNN_bottleneck}
+
+\section{Representation Learning via Invariant Causal Mechanism}
+\input{notes/RELIC}
+
+\section{U-Net: Convolutional Networks for Biomedical Image Segmentation}
+\input{notes/unet}
+
+\section{UNSUPERVISED REPRESENTATION LEARNING FOR TIME SERIES WITH TEMPORAL NEIGHBORHOOD CODING}
+\input{notes/TNC}
+
+%\clearpage
+\section{Graph Similarity}
+\subsection{graph2vec: Learning Distributed Representation of Graphs}
+\input{notes/graph2vec}
+%\clearpage
+
+\subsection{Convolutional Set Macthing for Graph Similarity\label{sec:GSimCNN}}
+\input{notes/GSimCNN}
+%\clearpage
+
+
+
+\subsection{SimGNN: A Neural Network Approach to Fast Graph Similarity Computation\label{sec:SimCNN}}
+\input{notes/SimGNN}
+%\clearpage
+
+\subsection{Unsupervised Inductive Graph-level Representation Learning via Grpah-Graph proximity}
+\input{notes/UGraphEmb}
+%\clearpage
+
+\subsection{Grapg-Graph Similarity Network}
+\input{notes/G2G}
+%\clearpage
+
+\subsection{Deep Graph Similarity Learning: A Survey}
+\input{notes/DGS}
+
+\subsection{Hierarchical Large-scale Graph Similarity Computation via Graph Coarsening and Matching}
+\input{notes/COSIMGNN}
+
+\subsection{Deep Graph Kernels}
+\input{notes/deepgraphkernels}
+
+\section{Dynamic Graphs}
+\subsection{EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs}
+\input{notes/dynamic graphs/evolvegcn}
+
+\subsection{Temporal Graph Networks for Deep Learning on Dynamic Graphs}
+\input{notes/dynamic graphs/TGNs}
+
+\subsection{Inductive representation learning on Temporal Graphs}
+\input{notes/dynamic graphs/TGAT}
+
+\subsection{DySAT: Deep Neural Representation Learning on Dynamic Graph via Self-Attention Networks}
+\input{notes/dynamic graphs/DySAT}
+
+\subsection{Spatial Temporal Graph Convolutional Network for Skeleton-Based Action Recogonition}
+\input{notes/dynamic graphs/ST-GCN}
+
+\subsection{Inductive Representation Learning In  Temporal Networks via Causal Anonymous Walks}
+\input{notes/dynamic graphs/CAW}
+
+\subsection{DISCRETE GRAPH STRUCTURE LEARNING FOR FORECASTING MULTIPLE TIME SERIES}
+\input{notes/dynamic graphs/GTS}
+
+\section{Recommender System}
+\subsection{Factorization Machines}
+\input{notes/recommender system/fm}
+
+\subsection{Wide \& Deep Learning for Recommender Systems}
+\input{notes/recommender system/wide&deep}
+
+\subsection{Deep Neural Networks for YouTube Recommendations}
+\input{notes/recommender system/youtubenet}
+
+\subsection{Field-aware Factorization Machines for CTR Prediction}
+\input{notes/recommender system/ffm}
+
+\subsection{DeepFM: A Factorization-Machine based Neural Network for CTR Prediction}
+\input{notes/recommender system/deepfm}
+
+%快速阅读论文列表，只是简要阅读论文的目的和思路和方法
+\clearpage
+\section{简读论文}
+\input{notes/quick}
+%\clearpage
+% \bibliographystyle{plain}
+% \bibliography{bibfile}
+
+
+% 打印参考文献
+\printbibliography
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

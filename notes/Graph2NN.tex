@@ -1,0 +1,50 @@
+\begin{center}
+
+  \begin{tabular}{rp{6cm}lp{12cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://arxiv.org/abs/2007.06559}{https://arxiv.org/abs/2007.06559} \\
+
+  源码：& \href{https://github.com/facebookresearch/graph2nn}{graph2nn} \\
+
+  slides：& \href{https://cs.stanford.edu/~jiaxuan/files/Graph_Structure_of_Neural_Networks_slides.pdf}{{\footnotesize Graph Sturcture of Neural Networks}}\\
+
+  关键词：& \textbf{Neural Networks, Graph Analysis} \\
+
+  写于：& \date{2020-10-14}
+
+  \end{tabular}
+
+\end{center}
+
+
+这篇论文\cite{you2020graph}从图的角度来解释神经网络（Neural Networks, NN），用relational graph来对NN进行建模，并在relational graph的基础上定义了NN训练的过程。在最短路径和聚集系数的基础上分析NN的性能。以这样的视角来解释和分析NN是一个新颖的角度，\tred{为设计NN和解释NN提供了新的思路}。
+
+\paragraph{如何建模NN为图？}引用文中的一句话：focus on message exchange, rather than just on directed data flow。建模的关键出发点是对NN中神经单元之间信息的交换，而不是信息的流向。想象如果给你一个图$\mathcal{G(V, E)}$，怎么把它看作一个NN呢，NN的训练如何在其上展开呢？论文中把$\mathcal{G}$称为relational graph。一个NN会有多层，可是一个图只有这么多结点，那么怎么训练这个“图化”后的NN呢？论文中使用round来对应NN中的层。则NN中信息在层间传递时，在$\mathcal{G}$中看起来是这样的：
+$$
+\boldsymbol{x}_v^{(r+1)} = AGG^{(r)} ( { f_v^{(r)} ( \boldsymbol{x}_u^{(r)}, \forall u \in N(v) ) } )
+$$
+其中，$\boldsymbol{x}_v^{(r)}$是结点$v$在第r round时的特征，$N(v)$是结点$v$的邻居（relational  graph中的结点都是自环的）。$AGG$类似于NN中的激活函数，$f$则类似于NN中的对上一层的输入进行线性组合或这卷积操作等。这看起来和基于消息传递的GNN模型看起来是很相似的。
+\newline
+
+论文中基于relational graph对现有的一些NN进行了分析，如固定宽度的MLP、可变宽度的MLP、ResNet的一些变体等，使用relational graph进行训练，并分析了NN“图化”后的结构与性能之间的关系。
+
+\paragraph{方法解决的问题/优势}
+\begin{itemize}
+	\item 开创性的将NN视作图数据进行分析（哎，我也想到了这个点子）
+	\item 以图的视角分析NN或许能够对NN的设计和理解产生很大影响
+%	\item 
+
+\end{itemize}
+
+\paragraph{方法的局限性/未来方向}
+\begin{itemize}
+	\item 个人认为论文中对NN建模为relational graph的想法很不错，也很符合现在的GNN做法，但是对于复杂的NN，以及NN中的一些特殊的操作，论文中的relational graph就有点简单了，\tbc{red}{难以表现复杂的NN结构}
+	\item 对relational graph的分析还比较少，局限于最短距离和聚集系数，可以分析图中的局部性的结构，如团、子图、motif等，以及一些其他的角度
+	\item \tbc{red}{有期望能够打通GNN和NN之间的联系，或许在此之上能够提出新的深度学习模型！！！}
+	\item 在论文基础上对NN进行解释
+\end{itemize}
+
+
+

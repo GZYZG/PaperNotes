@@ -1,0 +1,101 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=5694074}{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=5694074} \\
+  来源：& ICDM, 2010 \\
+  作者：& Steffen Rendle \\
+
+  源码：& \href{https://github.com/srendle/libfm}{libFM} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{ sparse data, tensor factorization, support vector machine} \\
+
+  写于：& \date{2021-08-10}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{rendle2010factorization}提出了一种新的模型 --- Factorization Machines(FM)，本质上是一个类似于SVM, LR的实值特征预测函数，但是FM能够应对及其稀疏的数据（如推荐场景）、包含了特征间的交互。一些关键点：
+\begin{itemize}
+	\item combines the advantages of Support Vector Machines (SVM) with factorization models
+	\item FMs are a general predictor working with any real valued feature vector
+	\item FMs model all interactions between variables using factorized parameters
+\end{itemize}
+
+ 
+\paragraph{问题定义}
+$$
+y : \mathbb{R}^n \longrightarrow T
+$$
+$T$是目标域，可以是实数，也可以是$\{+, -\}$，其中$\mathbb{R}^n$可能是及其稀疏的。
+
+\paragraph{FM}
+先上公式：
+$$
+\hat{y}(\boldsymbol{x}) = w_0 + \sum_{i=1}^n w_i x_i + \sum_{i=1}^n \sum_{j = i+1}^n <\boldsymbol{v_i}, \boldsymbol{v_j}> x_i x_j
+$$
+模型的输入就是$\boldsymbol{x} \in \mathbb{R}^n$，线性部分的参数$\boldsymbol{w} \in \mathbb{R}^n$，二阶特征交叉的权重是$\boldsymbol{V} \in \mathbb{R}^{n \times k}$。$\boldsymbol{v_i}$表示输入向量中第$i$个特征的向量表示。
+
+如果写成这样：
+$$
+\hat{y}(\boldsymbol{x}) = w_0 + \sum_{i=1}^n w_i x_i + \sum_{i=1}^n \sum_{j = i+1}^n w_{ij} x_i x_j
+$$
+那么交叉特征的权重组成的矩阵$\boldsymbol{W} = [w]_{ij}$将是一个对称矩阵，而且$\boldsymbol{W} = \boldsymbol{V} \boldsymbol{V}^T$（正定矩阵可以通过Cholesky矩阵分解方法分解为一个元素非负下三角与其转置的乘，但\tbc{red}{怎么保证$\boldsymbol{W}$是正定的呢？}）。那么为什么要写出一开始那个形式呢？
+
+如果交叉特征的权重写成对称矩阵$\boldsymbol{W}$的形式，那么对于特征$i, j$来说，要学习到$w_{ij}$则需要足够的样本满足一定条件：$x_i != 0 \cap x_j != 0$，当$x_i = 0 \cup x_j = 0$则对更新$w_{ij}$没有帮助。
+
+而把交叉特征的权重写成$<\boldsymbol{v_i}, \boldsymbol{v_j}>$的形式则不同了，由于每个特征都有一个隐向量$\boldsymbol{v_i}$，$\boldsymbol{v_i}$的更新可以通过$x_i, x_j$更新，也可以通过$x_i, x_k$来更新，当然，要更新$\boldsymbol{v_i}$，对特征$x_i$是有要求，有什么要求呢？
+
+先来对FM的公式的交叉特征部分进行一个化简：
+
+\begin{align}
+	& \sum_{i=1}^{n} \sum_{j=i+1}^{n}\left\langle\mathbf{v}_{i}, \mathbf{v}_{j}\right\rangle x_{i} x_{j} \label{step0} \\
+	=& \frac{1}{2} \sum_{i=1}^{n} \sum_{j=1}^{n}\left\langle\mathbf{v}_{i}, \mathbf{v}_{j}\right\rangle x_{i} x_{j}-\frac{1}{2} \sum_{i=1}^{n}\left\langle\mathbf{v}_{i}, \mathbf{v}_{i}\right\rangle x_{i} x_{i} \label{step1} \\
+	=& \frac{1}{2}\left(\sum_{i=1}^{n} \sum_{j=1}^{n} \sum_{f=1}^{k} v_{i, f} v_{j, f} x_{i} x_{j}-\sum_{i=1}^{n} \sum_{f=1}^{k} v_{i, f} v_{i, f} x_{i} x_{i}\right) \label{step2} \\
+	=& \frac{1}{2} \sum_{f=1}^{k}\left(\left(\sum_{i=1}^{n} v_{i, f} x_{i}\right)\left(\sum_{j=1}^{n} v_{j, f} x_{j}\right)-\sum_{i=1}^{n} v_{i, f}^{2} x_{i}^{2}\right) \label{step3} \\
+	=& \frac{1}{2} \sum_{f=1}^{k}\left(\left(\sum_{i=1}^{n} v_{i, f} x_{i}\right)^{2}-\sum_{i=1}^{n} v_{i, f}^{2} x_{i}^{2}\right) \label{step4}
+\end{align}
+稍微解释一下：
+\begin{itemize}
+	\item 从 式子.\ref{step0} 到 式子.\ref{step1} 的变化，需要注意$j$的索引从$i+1$变成了$1$，相当于计算了$<\boldsymbol{v_i}, \boldsymbol{v_j}>$，$<\boldsymbol{v_i}, \boldsymbol{v_j}>$，即计算了两遍，但是对角线上的元素只算了一遍，所以还要减去对角线上的元素
+	\item 从 式子.\ref{step1} 到 式子.\ref{step2} 的变化只是展开了$\boldsymbol{v_i}$而已
+	\item 从 式子.\ref{step2} 到 式子.\ref{step4} 的变化则是把$f$那一层的求和提出来了，再进行了一些变化：
+	$$
+	\begin{aligned}
+		& \sum_i^{n} \sum_j{n} v_{if} v_{jf} x_i x_j \\
+		=& \sum_i^n v_{if} x_i \sum_j^n v_{jf} x_j \\
+		=& A \cdot \sum_i^n v_{if} x_i \qquad (let\: A = \sum_j^n v_{jf} x_j) \\
+		=& A \cdot B \qquad (let \:B = \sum_i^n v_{if} x_i) \\
+		=& (\sum_i^n v_{if} x_i)^2
+	\end{aligned}
+	$$
+\end{itemize}
+这个变化可以看出，FM的时间复杂度是$O(kn)$，通过梯度下降更新参数时：
+\begin{equation}\nonumber
+	\frac{\partial}{\partial \theta} \hat{y}(\mathbf{x})= \begin{cases}1, & \text { if } \theta \text { is } w_{0} \\ x_{i}, & \text { if } \theta \text { is } w_{i} \\ x_{i} \sum_{j=1}^{n} v_{j, f} x_{j}-v_{i, f} x_{i}^{2}, & \text { if } \theta \text { is } v_{i, f}\end{cases}
+\end{equation}
+可以看到更新$v_{if}$时，需要$x_i$不等于0的样本。
+
+文中还讨论了FM与SVM和基于分解的模型的联系与区别。当数据很稀疏时，难以准确的学习到SVM的参数、通过变化输入特征，FM可以与一些基于分解的模型等价。
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=.8\textwidth]{}
+%	\caption{}
+%	\label{}
+%\end{figure}
+
+\paragraph{总结}
+
+\begin{itemize}
+	\item 将交叉特征的参数矩阵分解，得到每个特征的隐向量，用特征隐向量的内积作为交叉特征的权重
+	\item \tbc{red}{怎么保证$\boldsymbol{W}$是正定的呢？}
+	\item 分析了FM与SVM和基于分解的模型的联系
+
+\end{itemize}
+

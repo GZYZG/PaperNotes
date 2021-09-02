@@ -1,0 +1,53 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://arxiv.org/pdf/2010.11418.pdf}{https://arxiv.org/pdf/2010.11418.pdf} \\
+  来源：& NeurIPS, 2020 \\
+  作者：& Diego Mesquita, Amauri H. Souza, Samuel Kaski \\
+
+  %源码：& \href{xxx}{xxx} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{GNN, Pooling} \\
+
+  写于：& \date{2021-01-17}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{mesquita2020rethinking}对GNN中常用的pooling操作进行了思考，pooling对GNN的性能有多大帮助？可谓是对很多论文中提出的各式各样的pooling打脸了啊。该论文选择了三种比较具有代表性的pooling进行研究，使用随机的操作替换原来的pooling，结果性能基本没有变化（\tbc{red}{尴尬}），之后作者分析了卷积与pooling之间的关系，解释了pooling不起作用的原因。
+
+
+\paragraph{问题定义}
+GNNs中的pooling与CNN中的pooling类似，一般都是为了下采样，减小输入的规模。GNNs中的pooling通过将graph中的结点聚合生成一个规模更小的graph --- 具有更少的结点数，结点特征也更少。大部分的GNNs中都用到了pooling（有些论文中也叫coarsening），也有一些论文专门提出了一些pooling操作。其实，graph的pooling可以视作一个对结点进行聚类的过程，给每个结点赋予一个类别，将同一类别的结点视作pooling后的graph中的一个结点，节点特征矩阵和邻接矩阵也会更具pooling结果进行调整。具体的pooling可以根据结点的特征进行聚类（通常做法），也可以用神经网络来学习学习聚类的结果。
+
+既然大家都用pooling，它真的那么重要吗？
+
+\paragraph{Rethinking思路}
+作者选择了3个具有代表性的模型：GRACLUS\cite{dhillon2007weighted}、DIFFPOOL\cite{ying2019hierarchical}、GMN\cite{khasahmadi2020memory-based}。这3个模型里都使用了local pooling，作者对其中的pooling操作进行了修改，例如替换为随机的pooling、使用原graph的补graph进行pooling作为原graph的pooling结果等，在常用的数据集上对比了替换前后模型的效果。
+惊人的事情出现了 --- 模型的效果基本没有变化，有些甚至不如替换后的效果好！！！
+
+在分析阶段，作者主要分析了卷积和pooling对模型的影响。作者通过实验说明，卷积层学习到的结点特征是趋同的（同质的），而pooling则加重了这一现象，pooling可能会使得结点特征的方差变小。一个卷积相当于提取了一种特征，在实践中通常会使用多个卷积来提取特征。作者还实验了单个卷积和多个卷积对模型效果的影响 --- 单个卷积在大多数情况下效果都会比多个卷积更差，但是当特征是结点特征是常量是多个卷积对效果并无很大影响。卷积的数量与初始时结点特征的丰富程度有关。
+
+
+\paragraph{方法解决的问题/优势}
+
+\begin{itemize}
+	\item 很大胆的质疑了几乎所有GNNs中都用到了pooling
+	\item 在几个主流的pooling上进行了验证，与替换之后的pooling进行对比
+	\item 分析了各种pooling效果甚微的原因，分析了卷积与pooling之间的联系
+
+\end{itemize}
+
+
+\paragraph{方法的局限性/未来方向}
+
+\begin{itemize}
+	\item pooling也许并不是没用的。论文只是替换了pooling，并没有取消pooling，\tbc{red}{或许具体的pooling没有那么重要，但不代表pooling不重要}
+	\item 论文中所所验证的数据集都是规模比较小的graph，\tbc{red}{当扩展到规模大得多的graph上时，或许这个时候才能体现pooling的作用}
+\end{itemize}

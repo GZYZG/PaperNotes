@@ -1,0 +1,29 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://arxiv.org/pdf/1801.10247.pdf}{https://arxiv.org/pdf/1801.10247.pdf} \\
+  来源：& ICLR, 2018 \\
+  作者：& Jie Chen, Tengfei Ma, Cao Xiao \\
+
+  源码：& \href{https://github.com/matenure/FastGCN}{FastGCN} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{GCN, GNN} \\
+
+  写于：& \date{2021-01-21}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{chen2018fastgcn}针对GCN训练和学习过程中地计算量大和耗时提出了integral transform的方法。本文所针对的Graph主要是稠密图和符合幂律的Graph，当对其中一个结点卷积时，所覆盖的结点集可能已经很大了。同时，FastGCN是inductive的。
+
+本文的重点是对结点的采样以及从积分的角度来看待卷积层。
+
+这篇论文没看太懂，可见博客：\href{https://zhuanlan.zhihu.com/p/106226258}{源码分析-FastGCN}、\href{https://blog.csdn.net/yyl424525/article/details/101101079}{FastGCN}。
+
+

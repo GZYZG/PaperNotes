@@ -1,0 +1,43 @@
+\begin{center}
+
+  \begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+
+  论文地址：& \href{https://arxiv.org/pdf/2002.02886.pdf}{https://arxiv.org/pdf/2002.02886.pdf} \\
+  来源：& ICML, 2020\\
+  作者：& Francesco Locatello, Ben Poole \\
+
+  源码：& \href{https://github.com/google-research/google-research/tree/master/weak_disentangle}{weak\_disentangle} \\
+
+%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+
+  关键词：& \textbf{generative model, disentangled representation, weakly-supervised generative model} \\
+
+  写于：& \date{2021-01-22}
+
+  \end{tabular}
+
+\end{center}
+
+该论文\cite{francesco2020weakly-supervised}是关于解耦表征学习的。论文提出的解耦表征学习方法从成对的图像中学习解耦表征，成对的图像之间存在一些区别，区别主要体现在隐因子的不同上。该方法只需要知道有几个隐因子变化了而不需要知道具体是哪几个。
+
+\paragraph{解耦表征}目的是学习一个映射，该映射能够将数据映射到低维表示，表征是受潜在的因子控制的，每个潜在因子的变化能够使表征的一个或一些维度发生变化。这里所说的潜在因子与VAE中的隐变量很像。
+
+我们可以假设任这世界上是有“终极”的，任何事物都是由一些因子/隐变量/终极特征所控制的。当我们用计算机来建模世界时，一些潜在的因子在控制表征。当进行表征学习时，我们用一个低维的向量来表示数据点，表征向量的某一（些）维发生变化对应着潜在因子的变化。有时我们学习的特征也学可以较好地应用于下游任务，但是它可能并不是解耦的。例如在AE中，我们可以学习到重建误差很小的表征，但是隐变量与表征之间的对应关系可能并不那么准确，如控制颜色的因子并没有与表征中的颜色部分相对应。从相关的角度来看，表征的不同维度（或者维度子集间）之间没有尽可能地无关。为什么会这样呢？因为在重建误差地指导下，习得地表征并不一定与隐变量之间有很准确的一一对应关系，虽然重建效果好但是可能难以被我们理解，表征地不同维度之间是相关的。
+
+解耦表征的目的就是解决上述问题。解耦指的是表征的某个（些）维度与潜在因子之间解耦，即一个因子控制一个（些）表征的维度，一个（些）表征的维度受一个因子的控制。这样做有什么好处呢？首先，学习到的表征具有可解释性，对数据有更深层的理解；其次，可以控制表征的生成，知道表征与因子的对应关系可以实现可控的表征生成，相当于对表征空间有了更深入的了解；再者，对于下游任务，我们可以在解耦表征的基础上进行优化。
+
+\paragraph{问题定义}其实，这篇论文呢我也没可能太懂，可能是里面的数学太多了。但是文章主要解决的问题是从成对儿的数据中学习到解耦表征。从论文的title可以看出，weakly-supervised。论文中的数据不需要知道有哪些因子，只需要知道有多少因子变化了即可，不需要对数据进行标注。
+
+\paragraph{Disentangled Representation优点}
+\begin{itemize}
+	\item 解耦表征能够以压缩和可解释的结构包含原数据中的所有信息，并且表征与下游任务尽量无关
+	\item 对下游的半监督或无监督学习任务有帮助，如迁移学习、少样本学习等
+	\item 能够找出控制数据表征的重要factors
+
+\end{itemize}
+
+
+
+
