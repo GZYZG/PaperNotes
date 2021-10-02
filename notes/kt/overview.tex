@@ -1,0 +1,21 @@
+回顾Deep Knowledge Tracing。
+
+\paragraph{Knowledge Tracing}动态地估计学生地知识状态，评估学生对各个知识点的掌握程度。知识状态通常表现为：$t$时刻，学生在练习上的作答情况。
+
+在\textbf{学习某一课程}时，学生的学习行为序列：$\mathcal{X}_t = \{(q_1, r_1), ..., (q_t, r_t)\}$，其中$q_t$表示学生在$t$时回答的问题，$r_t$表示学生的回答。
+
+现在，将Knowledge Tracing建模为：$P(r_t | q_t,\mathcal{X}_{t-1})$。
+
+目前的Knowledge Tracing主要有以下几个特点：
+\begin{itemize}
+	\item $q_t$通畅为较为简单的问题、选择题，$r_t$为0或1
+	\item 在学习过程中，通常为只学习一个\textit{skill}、\textit{course}的情况
+	\item $q_i$通常作为知识点的载体，对应一个或多个知识点
+	\item 没有考虑知识点之间的依赖关系
+	\item 没有涉及到学生的知识状态的初始化问题，类似与“用户冷启动”
+	\item 一个学生的知识状态，只与其历史行为相关
+	\item 将学生在问题上的表现作为学生的知识状态（\tbc{red}{有无更好的表示学生知识水平的方法？}）
+	\item 大多数方法以预测准确率高为目标，模型的“注意力”主要集中在回答正确的问题上（\tbc{red}{从错误中学习}\cite{shen2021learning}）
+	\item 较少显示地考虑学生的学习/认知能力，练习对学生的状态地提升有多大（\cite{long2021tracing, shen2021learning}）
+	\item 较少地考虑到学生的知识随着时间而遗忘（\cite{shen2021learning}）
+\end{itemize}

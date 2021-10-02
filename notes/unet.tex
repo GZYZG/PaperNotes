@@ -48,7 +48,7 @@ U-Net整体可以分为两部分，左边的压缩路径部分和右边的扩展
 	\caption{Overlap-tile strategy}
 	\label{fig:overlap-tile}
 \end{figure}
-对于很大的图像，进行分割时可能需要将其进行划分成符合网络输入的块，原本在源图像内处于内部的区域可能成为了块的边界，在对块进行分割时，可能会产生缝隙/无法与相邻块的分割结果对齐。为了解决这个问题，也为了维持分割结果的size，U-Net使用了Overlap-tile strategy，以块的边界为轴进行镜像对称来对块进行padding（这一点不是很确定\emoji{confused}，论文中原文是：\textit{only use the valid part of each convolution}）。
+对于很大的图像，进行分割时可能需要将其进行划分成符合网络输入的块，原本在源图像内处于内部的区域可能成为了块的边界，在对块进行分割时，可能会产生缝隙/无法与相邻块的分割结果对齐。为了解决这个问题，也为了维持分割结果的size，U-Net使用了Overlap-tile strategy，以块的边界为轴进行镜像对称来对块进行padding（这一点不是很确定，论文中原文是：\textit{only use the valid part of each convolution}）。
 
 \par{\textbf{损失函数}}
 为了让U-Net对边界有更好的分割效果、对与相邻的同类区域也有较好的分割效果，U-Net使用了带权重的交叉熵损失函数，该损失函数在每个像素处对$p_{l(\boldsymbol{x})}(\boldsymbol{x})$与1的偏差进行了惩罚：

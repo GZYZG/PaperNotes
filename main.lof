@@ -1,66 +1,74 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces GraphRNN生成图的过程}}{6}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces 令Mean, Max失败的例子}}{8}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces LSTM 和 GRU cell的内部结构}}{10}{figure.3}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {LSTM cell}}}{10}{figure.3}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {GRU cell}}}{10}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces GG-NN}}{11}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces GGS-NN}}{11}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces VGAE}}{13}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Overview of DIFFPOOL}}{14}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Overview of GCPN}}{15}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces 有向图模型}}{16}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces without vs. with reparameterization}}{18}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Architecture of RTN for acoustic modelling}}{21}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Architecture of AAE}}{22}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces RecGNNs v.s. ConvGNNs}}{24}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Difference between GCN and GAT}}{25}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Main characteristics of selected GAEs}}{25}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Summary of benchmark datasets}}{27}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces CG3}}{33}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces SEED}}{34}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces WEAVE与随机游走对比}}{35}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Transformer Architecture}}{37}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Scaled Dot-Production Attention与Multi-Head Attention}}{38}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces CNN、Attention、Multi-head Attention}}{39}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Degradation}}{40}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Residual learning: a building block}}{40}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Traing deep GCNs}}{41}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Dilated Convolution in GCNs}}{42}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces DeepGCN}}{42}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Correct and Smooth}}{44}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces The bottlenecks of Seq2seq and GNN models}}{45}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Data Generation in Causal interpretation}}{46}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces U-Net architecture}}{48}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Overlap-tile strategy}}{49}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces TNC Architecture}}{49}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces GSimCNN的三个阶段，分别用不同颜色的虚线框圈出}}{51}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces 左边的为相似的图的相似矩阵，右边为不相似图的相似矩阵}}{52}{figure.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces SimGNN}}{53}{figure.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Overview of UGraphEmb}}{55}{figure.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Overview of Graph-Graph}}{56}{figure.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Taxonomy of DGS}}{57}{figure.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Overview of COSIM-GNN}}{59}{figure.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces EvolveGCN}}{61}{figure.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces TGN}}{63}{figure.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces TGAT layer，采用了多头注意力机制，k=3}}{65}{figure.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces DySAT}}{66}{figure.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces ST-GCN}}{68}{figure.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Anonymous walks}}{69}{figure.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces CAW}}{70}{figure.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Temporal Walk Extraction}}{70}{figure.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces GTS Architecture}}{71}{figure.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Wide\&Deep}}{74}{figure.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces 推荐系统整体架构}}{75}{figure.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Deep candidate generation model architecture}}{76}{figure.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces Deep ranking network architecture}}{77}{figure.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Training FFM with SGD}}{78}{figure.54}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Wide \& deep architecture of DeepFM}}{80}{figure.55}%
-\contentsline {figure}{\numberline {56}{\ignorespaces The architecture of FM}}{80}{figure.56}%
-\contentsline {figure}{\numberline {57}{\ignorespaces The architecture of DNN}}{81}{figure.57}%
-\contentsline {figure}{\numberline {58}{\ignorespaces The structure of the embedding layer}}{81}{figure.58}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Dense Embedding层计算方式}}{81}{figure.59}%
-\contentsline {figure}{\numberline {60}{\ignorespaces denotation graph extracted from the FLICKR30K dataset}}{83}{figure.60}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Overview of Topic-GraphSum}}{84}{figure.61}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Overview of HGNN}}{85}{figure.62}%
-\contentsline {figure}{\numberline {63}{\ignorespaces An Example of Code Property Graph(CPG)}}{85}{figure.63}%
+\contentsline {figure}{\numberline {1}{\ignorespaces RecGNNs v.s. ConvGNNs}}{6}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Difference between GCN and GAT}}{7}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Main characteristics of selected GAEs}}{8}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Summary of benchmark datasets}}{8}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces 有向图模型}}{12}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces without vs. with reparameterization}}{13}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Architecture of AAE}}{14}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Transformer Architecture}}{17}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Scaled Dot-Production Attention与Multi-Head Attention}}{18}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces CNN、Attention、Multi-head Attention}}{19}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Degradation}}{19}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Residual learning: a building block}}{20}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces VGAE}}{21}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces CG3}}{24}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces 令Mean, Max失败的例子}}{26}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces SEED}}{27}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces WEAVE与随机游走对比}}{27}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Traing deep GCNs}}{29}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Dilated Convolution in GCNs}}{30}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces DeepGCN}}{30}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces LSTM 和 GRU cell的内部结构}}{32}{figure.21}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {LSTM cell}}}{32}{figure.21}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {GRU cell}}}{32}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces GG-NN}}{33}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces GGS-NN}}{33}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces The bottlenecks of Seq2seq and GNN models}}{34}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Overview of DIFFPOOL}}{34}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces GraphRNN生成图的过程}}{37}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Correct and Smooth}}{39}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Overview of GCPN}}{41}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Architecture of RTN for acoustic modelling}}{45}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces denotation graph extracted from the FLICKR30K dataset}}{46}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Overview of HGNN}}{46}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces An Example of Code Property Graph(CPG)}}{47}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces GSimCNN的三个阶段，分别用不同颜色的虚线框圈出}}{49}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces 左边的为相似的图的相似矩阵，右边为不相似图的相似矩阵}}{50}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces SimGNN}}{51}{figure.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Overview of UGraphEmb}}{52}{figure.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Overview of Graph-Graph}}{53}{figure.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Taxonomy of DGS}}{55}{figure.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Overview of COSIM-GNN}}{56}{figure.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces EvolveGCN}}{59}{figure.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces TGN}}{61}{figure.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces TGAT layer，采用了多头注意力机制，k=3}}{63}{figure.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces DySAT}}{64}{figure.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces ST-GCN}}{66}{figure.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Anonymous walks}}{67}{figure.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces CAW}}{68}{figure.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Temporal Walk Extraction}}{68}{figure.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces GTS Architecture}}{70}{figure.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces U-Net architecture}}{71}{figure.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Overlap-tile strategy}}{72}{figure.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Overview of Topic-GraphSum}}{73}{figure.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Wide\&Deep}}{77}{figure.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces 推荐系统整体架构}}{78}{figure.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Deep candidate generation model architecture}}{79}{figure.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Deep ranking network architecture}}{80}{figure.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Training FFM with SGD}}{81}{figure.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Wide \& deep architecture of DeepFM}}{83}{figure.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces The architecture of FM}}{83}{figure.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces The architecture of DNN}}{84}{figure.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces The structure of the embedding layer}}{84}{figure.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Dense Embedding层计算方式}}{85}{figure.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces PNN Architecture}}{85}{figure.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Deep Knowledge Tracing}}{88}{figure.63}%
+\contentsline {figure}{\numberline {64}{\ignorespaces GKT流程}}{89}{figure.64}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Architectures of Previous Methods}}{90}{figure.65}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Architecture of SAINT}}{91}{figure.66}%
+\contentsline {figure}{\numberline {67}{\ignorespaces The frameworks and details of IEKT}}{92}{figure.67}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Federated Deep Knowledge Tracing Framework}}{94}{figure.68}%
+\contentsline {figure}{\numberline {69}{\ignorespaces The architecture of the LPKT model}}{95}{figure.69}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Data Generation in Causal interpretation}}{98}{figure.70}%
+\contentsline {figure}{\numberline {71}{\ignorespaces TNC Architecture}}{99}{figure.71}%

@@ -1,0 +1,12 @@
+\begin{center}
+	\begin{tabular}{rl}
+		% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+		论文地址：& \href{https://arxiv.org/abs/2010.02598}{https://arxiv.org/abs/2010.02598} \\
+		源码地址：& \href{https://github.com/yandex-research/graph-glove}{graph-glove} \\
+		关键词：& \textbf{embedding, representation learning} \\
+		写于：& \date{2020-10-08}
+	\end{tabular}
+\end{center}
+传统的word embedding通常是将词嵌入到向量空间中，\cite{10.1145/219717.219748}指出words可以形成具有隐式层次结构的图，词向量的质量与选取什么样的向量空间有很大的关系。针对这个问题，该论文\cite{ryabinin2020embedding}提出了GraphGlove，将词嵌入到带权图（weighted graph）中。在word相似性及相关任务中，该论文提出的方法取得了比嵌入到向量空间中更好的效果。\\
+\textbf{方法---GraphGlove}\hspace{6pt} 每个word视作带权图（weighted graph）中的一个结点，\textbf{词之间的距离使用图中结点之间的shortest path来表示（与欧氏空间中距离的定义不同）}。使用PRODIGE\cite{mazur2019vector}从数据中学习，可以得到一个带权图以及图中边的权重；再将学习得到的带权图用于GloVe\cite{pennington-etal-2014-glove}算法，学习得到在非欧空间中的词向量，关键之处是替换GloVe的损失函数中词之间距离为图中结点之间的最短距离。\\
+该论文与其他embedding方法不同的之处：将word嵌入到非欧空间，学习到的带权图就是这个非欧空间。

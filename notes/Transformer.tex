@@ -57,7 +57,7 @@ $$
 \operatorname{Attention}(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V
 $$
 有两种常用的attention函数：additive attention和dot-product attention。该论文中使用的是dot-product attention，但是略微不同，是Scaled后的dot-product attention。\tbc{red}{为什么要对dot-product 进行scaled呢？}
-\tbc{green}{当query、key的维度很大时，点积后的值可能会很大，可能会使softmax函数进入梯度很小的区域}。举个例子，加入q和k都是服从均值为0，方差为1的分布的随机变量，那么$q \cdot k = \sum_{i=1}^{d} q_i k_i$，结果的均值为0，但是方差为$d$。
+\tbc{green}{当query、key的维度很大时，点积后的值可能会很大，可能会使softmax函数进入梯度很小的区域}。举个例子，假如q和k都是服从均值为0，方差为1的分布的随机变量，那么$q \cdot k = \sum_{i=1}^{d} q_i k_i$，结果的均值为0，但是方差为$d$。
 
 论文中使用了\textbf{Multi-head Attention}。从Fig.\ref{fig:scaled dot-product attention and multi-head attention}可以看出，在进行Multi-head Attention之前，先对Q、K、V进行了线性映射：
 $$
@@ -76,7 +76,7 @@ $$
 	P E_{(p o s, 2 i+1)} &=\cos \left(p o s / 10000^{2 i / d_{\text {model }}}\right)
 \end{aligned}
 $$
-其中$pos,i$分别表示position和位置编码的维度。作者选用这样的位置编码的原因：\tbc{red}{使不同位置的元素能够通过相对位置更好地与当前元素建立关系，因为对于任意固定的$k$，$PE_{pos+k}$可以表示为$PE_{pos}$的线性函数}。
+其中$pos,d_{model}$分别表示词在序列中的位置和位置向量的维度。作者选用这样的位置编码的原因：\tbc{red}{使不同位置的元素能够通过相对位置更好地与当前元素建立关系，因为对于任意固定的$k$，$PE_{pos+k}$可以表示为$PE_{pos}$的线性函数}。
 
 \paragraph{Why Self-Attention}
 $$
@@ -120,13 +120,6 @@ $$
 
 
 %\paragraph{方法的局限性/未来方向}
-
-\begin{itemize}
-
-	%\item 
-
-\end{itemize}
-
 
 
 \paragraph{Attention参考资料}

@@ -1,0 +1,36 @@
+\begin{center}
+	
+	\begin{tabular}{rp{16cm}lp{20cm}}%{rl}
+		
+		% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+		
+		论文地址：& \href{https://arxiv.org/pdf/1612.06935.pdf}{https://arxiv.org/pdf/1612.06935.pdf} \\
+		来源：& TKDE, 2020 \\
+		作者：& Xingzhong Du, Hongzhi Yin, et al. \\
+		
+		%源码：& \href{xxx}{xxx} \\
+		
+		%  slides：& \href{http://yunshengb.com/wp-content/uploads/2017/03/nips_2018_r2l_workshop_talk.pdf}{{\footnotesize Convolutional Set Matching for Graph Similarity}}\\
+		
+		关键词：& \textbf{Recommender model, personalization, video content analysis, rich content features, late fusion} \\
+		
+		写于：& \date{2021-09-06}
+		
+	\end{tabular}
+	
+\end{center}
+
+在视频推荐中，现有的方法通常基于用户与视频的交互和单一的（视频）内容特征（如文本、音频等）进行推荐，当这个内容特征缺失时，推荐系统的性能将会受到很大的影响。该论文\cite{du2020personalized}针对这个问题，论文提出一种框架 --- collaborative embedding regression（CER）来解决这个问题。CER利用视频中丰富的内容特征，来弥补当某一种内容特征确实时带来的限制。另外，文中还提出了priority-based late fusion（PRI），用于获得集成多种内容特征带来的性能收益。
+
+\paragraph{问题定义}
+视频推荐中，很多方法只利用了视频的某一种特征，如文本、音频等，这会导致推荐系统在单一的特征缺失时效果不佳或者受制于冷启动问题。为了融合视频的多种特征以及能够在冷启动中也能取得良好的结果，论文提出了CER --- 将CF（Collaborative Filtering与任一视频特征结合，以及PRI --- 给出每种视频特征的优先级，来利用基于每种特征进行推荐时的结果。
+
+\paragraph{xxx}
+
+\paragraph{总结}
+
+\begin{itemize}
+	\item
+	
+\end{itemize}
+

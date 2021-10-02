@@ -44,17 +44,17 @@ $$
 \par 现在假设已经获得了生成模型，那么如何去生成一个图呢？过程如下。
 \begin{algorithm}[H]
     \begin{algorithmic}[1]
-        \textbf{Input}: RNN-based transition module f_{trans}, output\ module\ f_{out}, \newline
-        probability\ distribution\ \mathcal{P}_{\theta_{i}}\ parameterized\ by\ \theta_{i}, start\ token\ SOS, end\ token\  EOS, empty\ graph\ state\ h^{'} \newline
-        \textbf{Output}: Graph\ sequence\ S^{\pi}
-        S^{\pi}_1=SOS, h_1=h^{'}, i=1 \newline
+        \textbf{Input}: RNN-based transition module $f_{trans}$, output\ module\ $f_{out}$, \newline
+        probability\ distribution\ $\mathcal{P}_{\theta_{i}}$\ parameterized\ by\ $\theta_{i}$, start\ token\ SOS, end\ token\  EOS, empty\ graph\ state\ $h^{'}$ \newline
+        \textbf{Output}: Graph\ sequence\ $S^{\pi}$
+        $S^{\pi}_1=SOS, h_1=h^{'}, i=1$ \newline
         \textbf{repeat} \newline
-            i = i+1 \newline
-            h_i = f_{trans}(h_{i-1}, S^{\pi}_{i-1})\{update\ graph\ state\}\newline
-            \theta_i = f_{out}(h_i) \newline
-            S^{\pi}_{i} \sim \mathcal{P}_{\theta_i}\{smaple\ node\ i's\ edge\ connections\} \newline
-        \textbf{until}\ S^{\pi}_i\ is\ EOS \newline
-        \textbf{Return}\ S^{\pi} = (S^{\pi}_1,...,S^{\pi}_i) \newline
+            $i = i+1$ \newline
+            $h_i = f_{trans}(h_{i-1}, S^{\pi}_{i-1})\{update\ graph\ state\}$\newline
+            $\theta_i = f_{out}(h_i)$ \newline
+            $S^{\pi}_{i} \sim \mathcal{P}_{\theta_i}\{smaple\ node\ i's\ edge\ connections\}$ \newline
+        \textbf{until}\ $S^{\pi}_i$\ is\ EOS \newline
+        \textbf{Return}\ $S^{\pi} = (S^{\pi}_1,...,S^{\pi}_i)$ \newline
     \end{algorithmic}
     \caption{GraphRNN inference algorithm }
 \end{algorithm}

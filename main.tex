@@ -72,168 +72,100 @@ zhiyanguo@hnu.edu.cn \href{www.gzyzq.site}{www.gzyzq.site} \\
 \listoffigures
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
+\newboolean{chapter}
+\setboolean{chapter}{true}
+% 如果不需要哪一章，将对应的设置为false
+\newboolean{surveys}
+\setboolean{surveys}{true}
+\newboolean{dlml}
+\setboolean{dlml}{true}
+\newboolean{gnntheory}
+\setboolean{gnntheory}{true}
+\newboolean{gnnapp}
+\setboolean{gnnapp}{true}
+\newboolean{gnnsim}
+\setboolean{gnnsim}{true}
+\newboolean{dynamicgnn}
+\setboolean{dynamicgnn}{true}
+\newboolean{cv}
+\setboolean{cv}{true}
+\newboolean{nlp}
+\setboolean{nlp}{true}
+\newboolean{recsys}
+\setboolean{recsys}{true}
+\newboolean{kt}
+\setboolean{kt}{true}
+\newboolean{others}
+\setboolean{others}{true}
+
+
+
 %\abstract{This is the template .}
-\section{GraphRNN: Generating Realistic Graphs with Deep Auto-Regressive Models}
-\input{notes/graphrnn}
+\ifthenelse{\boolean{surveys}}{
+\section{Surveys}
+\input{chapters/surveys}
+}{}
 
+\ifthenelse{\boolean{dlml}}{
 \clearpage
-\section{How powerful are graph gnns?}
-\input{notes/powerful-gnns}
+\section{DL / ML theory}
+\input{chapters/dl-ml-theory}
+}{}
 
+\ifthenelse{\boolean{gnntheory}}{
 \clearpage
-\section{Gated Graph Sequence Neural Networks}
-\input{notes/GGS-NN}
+\section{GNN Theory}
+\input{chapters/gnn-theory}
+}{}
 
-
+\ifthenelse{\boolean{gnnapp}}{
 \clearpage
-\section{Graph Structure of Neural Networks}
-\input{notes/Graph2NN}
+\section{GNN Application}
+\input{chapters/gnn-application}
+}{}
 
+\ifthenelse{\boolean{gnnsim}}{
 \clearpage
-\section{Variational Graph Auto-Encoders}
-\input{notes/VGAE}
-
-\clearpage
-\section{Hierarchical Graph Representation Learning with Differentiable Pooling}
-\input{notes/DIFFPOOL}
-
-\section{Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation}
-\input{notes/GCPN}
-
-\section{Auto-Encoding Variational Bayes}
-\input{notes/AEVB}
-
-\section{Deep Graph random Process for Relational-Thinking-based Speech Recognition}
-\input{notes/DGP}
-
-\section{Adversarial Autoencoders}
-\input{notes/AAE}
-
-\section{A Comprehensive Survey on Graph Neural Network}
-\input{notes/survey_on_gnn}
-
-
-\section{The Emerging Field of Signal Processing on Graphs}
-\input{notes/spg}
-
-\section{Rethinking pooling in graph neural networks}
-\input{notes/rethinking}
-
-\section{FASTGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling}
-\input{notes/fastgcn}
-
-\section{Weakly-Supervised Disentanglement Without Compromises}
-\input{notes/weakly-supervised}
-
-\section{Representation Learning: A Review and New Perspectives}
-\input{notes/representation-learning}
-
-\section{Contrastive and Generative Graph Convolutional Networks for Graph-based Semi-Supervised Learning}
-\input{notes/CG3}
-
-\section{Inductive and Unsupervised Representation Learning on Graph Structured Objects}
-\input{notes/SEED}
-
-\section{Attention is All you need}
-\input{notes/Transformer}
-
-\section{Deep Residual Learning for Image Recognition}
-\input{notes/ResNet}
-
-\section{DeepGCNs: Can GCNs Go as Deep as CNNs?}
-\input{notes/DeepGCN}
-
-\section{Combining Label Propagation and Simple Models OUT-PERFORMS Graph Networks}
-\input{notes/C_S}
-
-\section{On the Bottleneck of Graph Neural Networks And Practical Implcation}
-\input{notes/GNN_bottleneck}
-
-\section{Representation Learning via Invariant Causal Mechanism}
-\input{notes/RELIC}
-
-\section{U-Net: Convolutional Networks for Biomedical Image Segmentation}
-\input{notes/unet}
-
-\section{UNSUPERVISED REPRESENTATION LEARNING FOR TIME SERIES WITH TEMPORAL NEIGHBORHOOD CODING}
-\input{notes/TNC}
-
-%\clearpage
 \section{Graph Similarity}
-\subsection{graph2vec: Learning Distributed Representation of Graphs}
-\input{notes/graph2vec}
-%\clearpage
+\input{chapters/graph-similarity}
+}{}
 
-\subsection{Convolutional Set Macthing for Graph Similarity\label{sec:GSimCNN}}
-\input{notes/GSimCNN}
-%\clearpage
-
-
-
-\subsection{SimGNN: A Neural Network Approach to Fast Graph Similarity Computation\label{sec:SimCNN}}
-\input{notes/SimGNN}
-%\clearpage
-
-\subsection{Unsupervised Inductive Graph-level Representation Learning via Grpah-Graph proximity}
-\input{notes/UGraphEmb}
-%\clearpage
-
-\subsection{Grapg-Graph Similarity Network}
-\input{notes/G2G}
-%\clearpage
-
-\subsection{Deep Graph Similarity Learning: A Survey}
-\input{notes/DGS}
-
-\subsection{Hierarchical Large-scale Graph Similarity Computation via Graph Coarsening and Matching}
-\input{notes/COSIMGNN}
-
-\subsection{Deep Graph Kernels}
-\input{notes/deepgraphkernels}
-
-\section{Dynamic Graphs}
-\subsection{EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs}
-\input{notes/dynamic graphs/evolvegcn}
-
-\subsection{Temporal Graph Networks for Deep Learning on Dynamic Graphs}
-\input{notes/dynamic graphs/TGNs}
-
-\subsection{Inductive representation learning on Temporal Graphs}
-\input{notes/dynamic graphs/TGAT}
-
-\subsection{DySAT: Deep Neural Representation Learning on Dynamic Graph via Self-Attention Networks}
-\input{notes/dynamic graphs/DySAT}
-
-\subsection{Spatial Temporal Graph Convolutional Network for Skeleton-Based Action Recogonition}
-\input{notes/dynamic graphs/ST-GCN}
-
-\subsection{Inductive Representation Learning In  Temporal Networks via Causal Anonymous Walks}
-\input{notes/dynamic graphs/CAW}
-
-\subsection{DISCRETE GRAPH STRUCTURE LEARNING FOR FORECASTING MULTIPLE TIME SERIES}
-\input{notes/dynamic graphs/GTS}
-
-\section{Recommender System}
-\subsection{Factorization Machines}
-\input{notes/recommender system/fm}
-
-\subsection{Wide \& Deep Learning for Recommender Systems}
-\input{notes/recommender system/wide&deep}
-
-\subsection{Deep Neural Networks for YouTube Recommendations}
-\input{notes/recommender system/youtubenet}
-
-\subsection{Field-aware Factorization Machines for CTR Prediction}
-\input{notes/recommender system/ffm}
-
-\subsection{DeepFM: A Factorization-Machine based Neural Network for CTR Prediction}
-\input{notes/recommender system/deepfm}
-
-%快速阅读论文列表，只是简要阅读论文的目的和思路和方法
+\ifthenelse{\boolean{dynamicgnn}}{
 \clearpage
-\section{简读论文}
-\input{notes/quick}
-%\clearpage
+\section{Dynamic Graphs}
+\input{chapters/dynamic-graph}
+}{}
+
+\ifthenelse{\boolean{cv}}{
+\clearpage
+\section{CV}
+\input{chapters/cv}
+}{}
+
+\ifthenelse{\boolean{nlp}}{
+\clearpage
+\section{NLP}
+\input{chapters/nlp}
+}{}
+
+\ifthenelse{\boolean{recsys}}{
+\clearpage
+\section{Recommender System}
+\input{chapters/recommender-systems}
+}{}
+
+\ifthenelse{\boolean{kt}}{
+\clearpage
+\section{Knowledge Tracing}
+\input{chapters/knowledge-tracing}
+}{}
+
+\ifthenelse{\boolean{others}}{
+\clearpage
+\section{Others}
+\input{chapters/Others}
+}{}
+%\clearpagev
 % \bibliographystyle{plain}
 % \bibliography{bibfile}
 

@@ -1,49 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--empty journal in rossi2020temporal
 Warning--empty journal in wan2020contrastive
-You've used 71 entries,
+You've used 81 entries,
             2118 wiz_defined-function locations,
-            817 strings with 17143 characters,
-and the built_in function-call counts, 27764 in all, are:
-= -- 2563
-> -- 1798
-< -- 23
-+ -- 708
-- -- 635
-* -- 1951
-:= -- 4585
-add.period$ -- 199
-call.type$ -- 71
-change.case$ -- 530
+            862 strings with 19261 characters,
+and the built_in function-call counts, 32878 in all, are:
+= -- 3067
+> -- 2122
+< -- 31
++ -- 836
+- -- 753
+* -- 2326
+:= -- 5400
+add.period$ -- 229
+call.type$ -- 81
+change.case$ -- 619
 chr.to.int$ -- 0
-cite$ -- 73
-duplicate$ -- 959
-empty$ -- 1875
-format.name$ -- 635
-if$ -- 5763
+cite$ -- 83
+duplicate$ -- 1141
+empty$ -- 2168
+format.name$ -- 753
+if$ -- 6838
 int.to.chr$ -- 0
-int.to.str$ -- 71
-missing$ -- 54
-newline$ -- 341
-num.names$ -- 144
-pop$ -- 662
+int.to.str$ -- 81
+missing$ -- 64
+newline$ -- 391
+num.names$ -- 164
+pop$ -- 751
 preamble$ -- 1
-purify$ -- 459
+purify$ -- 538
 quote$ -- 0
-skip$ -- 805
+skip$ -- 974
 stack$ -- 0
-substring$ -- 1254
-swap$ -- 296
-text.length$ -- 23
+substring$ -- 1568
+swap$ -- 380
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 284
+type$ -- 324
 warning$ -- 2
-while$ -- 216
-width$ -- 73
-write$ -- 711
+while$ -- 260
+width$ -- 83
+write$ -- 819
 (There were 2 warnings)
