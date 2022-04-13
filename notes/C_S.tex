@@ -58,7 +58,7 @@ $$
 
 但是有一个问题：
 $$
-\left\|E^{(t+1)}\right\|_{2} \leq(1-\alpha)\|E\|+\alpha\|S\|_{2}\left\|E^{(t)}\right\|_{2}=(1-\alpha)\|E\|_{2}+\alpha\left\|E^{(t)}\right\|_{2}
+\left\|E^{(t+1)}\right\|_{2} \leq(1-\alpha)\|E\|_2 +\alpha\|S\|_{2}\left\|E^{(t)}\right\|_{2}=(1-\alpha)\|E\|_{2}+\alpha\left\|E^{(t)}\right\|_{2}
 $$
 因此$\left\|E^{(t)}\right\|_{2} \leq\|E\|_{2}$，可见在迭代求解过程中误差信息有一定损失，因此作者提出了对误差信息进行缩放。作者提出了两种缩放方法：
 \begin{itemize}
@@ -67,11 +67,12 @@ $$
 	\item Scaled Fixed Diffusion。在迭代过程中保持标签数据上的误差不变，即$E_U^{(t+1)} = [D^{-1}AE^{(t)}]_U,\: E_L^{(t)} = E_L$；
 \end{itemize}
 
+所以呢 $Z^{(r)} = Z + \text{Scale}(\hat{E})$，$\text{Scale}$ 的方式则视情况而定啦。
 
 \subparagraph{Smoothing final prediction with Prediction Correlation}
 通过上一步已经得到了$Z^{(r)}$，这一步是对$Z^{(r)}$的“平滑”。这一步的动机是：\textbf{相邻的结点相似，更可能具有相同的标签，即文中的prediction correlation}，这一步再次借助LP对结点的标签分布进行平滑。
 
-首先构造一个$G$中结点的标签分布$P \in \mathbb{R}^{n \times c}$，$P_{L_t} = Y_{L_t},\: G_{L_v, U} = Z^{(r)}_{L_v, U}$。接着就是平滑了，也就是一个迭代的过程：$P^{(t+1)} = (1-\alpha)P + \alpha SP^{(t)}$，一直迭代到收敛得到最终的收敛$\hat{Y}_{ij}$。
+首先构造一个$G$中结点的标签分布$P \in \mathbb{R}^{n \times c}$，$P_{L_t} = Y_{L_t},\: G_{L_v, U} = Z^{(r)}_{L_v, U}$。接着就是平滑了，也是一个迭代的过程：$P^{(t+1)} = (1-\alpha)P + \alpha SP^{(t)}$，一直迭代到收敛得到最终的收敛$\hat{Y}_{ij}$。
 
 \paragraph{总结}
 

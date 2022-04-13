@@ -297,7 +297,7 @@
 \contentsline {paragraph}{总结}{90}{section*.233}%
 \contentsline {subsection}{\numberline {10.4}Tracing Knowledge State with Individual Cognition and Acquisition Estimation}{91}{subsection.10.4}%
 \contentsline {paragraph}{问题定义}{91}{section*.234}%
-\contentsline {paragraph}{SAINT}{91}{section*.235}%
+\contentsline {paragraph}{IEKT}{91}{section*.235}%
 \contentsline {paragraph}{总结}{93}{section*.236}%
 \contentsline {subsection}{\numberline {10.5}Federated Deep Knowledge Tracing}{93}{subsection.10.5}%
 \contentsline {paragraph}{问题定义}{93}{section*.237}%
